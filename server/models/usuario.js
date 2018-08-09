@@ -4,7 +4,7 @@ let Schema = mongoose.Schema;
 
 let rolesValidos = {
     values: ['ADMIN_ROLE', 'USER_ROLE'],
-    message: '{VALUE} no es un rol valido'
+    message: '{ VALUE } no es un rol valido'
 };
 
 let usuarioSchema = new Schema({
@@ -47,7 +47,6 @@ usuarioSchema.methods.toJSON = function() {
 
     return userObject;
 }
-
 
 usuarioSchema.plugin(uniqueValidator, { message: '{PATH} debe ser unico' });
 
