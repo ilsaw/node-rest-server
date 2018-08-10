@@ -123,14 +123,9 @@ app.post('/google', async(req, res) => {
                 }, process.env.SEED, { expiresIn: process.env.CADUCIDAD_TOKEN });
 
                 return res.json({ ok: true, usuario: usuarioDB, token });
-
-
             });
         }
-
-
     });
-    //res.json({ usuario: googleUser });
 });
 
 module.exports = app;
